@@ -34,6 +34,17 @@ class Lists{
 		}
 	}
 	
+	public Node search(int key){
+		Node temp = first;
+		while(temp != null){
+			if(temp.data == key){
+				return temp;
+			}
+			temp = temp.next;
+		}
+		return null;
+	}
+	
 	class Node{
 		private int data;
 		Node next;
@@ -55,5 +66,11 @@ class LinkedLists{
 		lists.printLists();
 		lists.delete();
 		lists.printLists();
+		if(lists.search(80) != null){
+			System.out.println("Search value is in the list");
+		}else{
+			System.out.println("Search value is not in the list");
+		}
+		
 	}
 }
