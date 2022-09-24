@@ -26,6 +26,14 @@ class Lists{
 		System.out.print(first==null?"empty]":"\b\b]");
 	}
 	
+	public void delete(){
+		if(first != null){
+			first = first.next;
+		}else{
+			System.out.println("List is empty!");
+		}
+	}
+	
 	class Node{
 		private int data;
 		Node next;
@@ -44,7 +52,8 @@ class LinkedLists{
 		lists.add(30);
 		lists.add(40);
 		lists.add(50);
-		
+		lists.printLists();
+		lists.delete();
 		lists.printLists();
 	}
 }
