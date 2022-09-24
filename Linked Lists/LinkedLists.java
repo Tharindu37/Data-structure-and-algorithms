@@ -45,6 +45,29 @@ class Lists{
 		return null;
 	}
 	
+	public Node deleteKey(int key){
+		if(first != null){
+			Node current = first;
+			Node previous = first;
+			while(current != null){
+				if(current.data == key){
+					if(current == first){
+						first = first.next;
+					}else{
+						previous.next = current.next;
+					}
+					return current;
+				}else{
+					previous = current;
+					current = current.next;
+				}
+			}
+		}else{
+			System.out.println("List is empty!");
+		}
+		return null;
+	}
+	
 	class Node{
 		private int data;
 		Node next;
@@ -71,6 +94,9 @@ class LinkedLists{
 		}else{
 			System.out.println("Search value is not in the list");
 		}
+		
+		lists.deleteKey(40);
+		lists.printLists();
 		
 	}
 }
