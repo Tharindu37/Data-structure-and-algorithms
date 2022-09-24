@@ -67,6 +67,19 @@ class Lists{
 		}
 		return null;
 	}
+	public void deleteLastNode(){
+		if(first != null){
+			Node current = first;
+			Node previous = first;
+			while(current.next != null){
+				previous = current;
+				current = current.next;
+			}
+			previous.next = null;
+		}else{
+			System.out.println("List is empty!");
+		}
+	}
 	
 	class Node{
 		private int data;
@@ -96,6 +109,8 @@ class LinkedLists{
 		}
 		
 		lists.deleteKey(40);
+		lists.printLists();
+		lists.deleteLastNode();
 		lists.printLists();
 		
 	}
