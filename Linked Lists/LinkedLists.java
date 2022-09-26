@@ -23,7 +23,7 @@ class Lists{
 				System.out.print(temp.data+", ");
 			}
 		}
-		System.out.print(first==null?"empty]":"\b\b]");
+		System.out.println(first==null?"empty]":"\b\b]");
 	}
 	
 	public void delete(){
